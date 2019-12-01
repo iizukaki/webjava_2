@@ -1,6 +1,17 @@
 package jp.co.systena.tigerscave.granbluefantasy.model;
 
-public class Fighter extends Human {
+public class Fighter extends Job {
+
+  public Fighter(String name) {
+    super(name);
+    // TODO 自動生成されたコンストラクター・スタブ
+  }
+
+  /** 職業名 */
+  private String name;
+
+
+  
 
   @Override
   void fight() {
