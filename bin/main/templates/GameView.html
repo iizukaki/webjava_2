@@ -7,18 +7,18 @@
 <body>
 	<h2>キャラシート</h2>
 
-
+		<p th:text="${msg}" />
 		<form method="POST" action="mypage" th:object="${JobForm}">
 		<table>
-			<p>職業:<input id="fighter" type="radio" name="company" value="figther" th:field="*{selectedJob}"/>
+			<p>職業:<input id="fighter" type="radio" name="selectedJob" th:value="${fighter}" th:field="*{selectedJob}"/>
 			<label for="figther">戦士</label>
 
-			<input id="witch" type="radio" name="company" value="witch"  th:field="*{selectedJob}"/>
+			<input id="witch" type="radio" name="selectedJob" th:value="${witch}"  th:field="*{selectedJob}"/>
 			<label for="witch">魔法使い</label></p>
 
-			<p>名前:<input type="text" name="name"  th:field="*{username}"/></p>
+			<p>名前:<input type="text" name="username"  th:field="*{username}"/></p>
 			<input type="submit"value="次へ" />
-			<th:block th:if="${name} and ''!=${name}">
+			<th:block th:if="${username} and ''!=${username}">
 
 	</table>
 	</form>
